@@ -2,7 +2,7 @@ from flask import config
 from app import app
 import urllib.request,json
 from .models import movie
-# from ..instance.config import MOVIE_API_KEY
+
 
 Movie = movie.Movie
 
@@ -12,10 +12,6 @@ api_key = app.config['MOVIE_API_KEY']
 # Getting the movie base url
 base_url = app.config["MOVIE_API_BASE_URL"]
 print(api_key)
-
-# Getting the movie base url
-# base_url = app.config["https://api.themoviedb.org/3/movie/{}?api_key={0d3aa5f4f17f9d75f21c0a14f94c6667}"]
-
 
 def get_movies(category):
     '''
